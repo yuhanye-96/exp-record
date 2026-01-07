@@ -1,14 +1,13 @@
 # 强化学习实验记录
-观察后调整reward
-修复collision没置上的错误
+
 
 ## 1. 实验基本信息
 
 | 字段 | 内容 |
 |---|---|
-| 实验编号 | yyh-pvp-campclose-v2-01051926x2 |
-| 实验名称 | PVP campclose |
-| 实验日期 | 2026-01-05 |
+| 实验编号 | yyh-pvp-nearby-penalty-01062042x |
+| 实验名称 | PVP add nearby penalty |
+| 实验日期 | 2026-01-06 |
 | 负责人 | Yuhan Ye |
 | 项目 | G |
 | Commit | default |
@@ -18,9 +17,7 @@
 
 | 项目 | 描述 |
 |---|---|
-| 1 | 初始化站位是否能带来团队决策的提升 |
-| 2 | 身后射线特征和奖励能否减少撞墙 |
-| 3 | JUMP CROUCH cd限制能否减少无意义蹲跳 |
+| 1 | 近处damage减少，远程增加， 观察弓箭手和牧师是否还贴脸攻击，是否还喜欢跳攻击 |
 | 对比方案 | baseline |
 
 ## 3. 环境与任务
@@ -52,8 +49,8 @@
 
 ## 5. 实验变量
 
-damage epoch < 50 *1.25
-takeDamage epoch < 50 *0.75
+< 2m  damage * 0.2
+> 2m  damage * 1.2
 
 ## 6. 结果
 
